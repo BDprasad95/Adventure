@@ -1,197 +1,136 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<style>
-* {
-  box-sizing: border-box;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Adventure</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap-theme.min.css">
+    <style>body{padding-top:0;}.starter-template{padding:40px 15px;text-align:center;}</style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+</head>
 
-body {
-  background-color: #f1f1f1;
-}
-
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
-}
-
-h1 {
-  text-align: center;  
-}
-
-input {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa;
-}
-
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
-}
-
-/* Hide all steps by default: */
-.tab {
-  display: none;
-}
-
-button {
-  background-color: #4CAF50;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  font-family: Raleway;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-#prevBtn {
-  background-color: #bbbbbb;
-}
-
-/* Make circles that indicate the steps of the form: */
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  border: none;  
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
-
-.step.active {
-  opacity: 1;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #4CAF50;
-}
-</style>
 <body>
-
-<form id="regForm" action="/action_page.php">
-  <h1>Register:</h1>
-  <!-- One "tab" for each step in the form: -->
-  <div class="tab">Name:
-    <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-    <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
-  </div>
-  <div class="tab">Contact Info:
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-    <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
-  </div>
-  <div class="tab">Birthday:
-    <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-  </div>
-  <div class="tab">Login Info:
-    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-  </div>
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    
+    <div class="container">
+        <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-info shadow p-2 mb-4 rounded">
+            <span class="navbar-brand"><mark class="bg-warning">ADVENTURE</mark></span>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#cn">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="cn">
+            <ul class="navbar-nav">
+            <li class="nav-item active"><a  class="nav-link" href="#"><i class="fas fa-home"></i>HOME</a></li>
+            <li class="nav-item"><a  class="nav-link" href="#r" >ACTIVITIES</a></li> 
+                <li class="nav-item"><a  class="nav-link" href="#g" >TOOLS</a></li> 
+            <li class="nav-item"><a  class="nav-link" href="#ig" >GALLERY</a></li>   
+            <li class="nav-item"><a  class="nav-link" href="#a" >ABOUT</a></li>   
+        
+            </ul>
+            </div>
+        </nav>
+      
+      <img src="adventure-trips-in-india_1440486703.jpg" class="img-fluid mx-auto d-block mt-3" style="margin-left:1%">
+            
+     <div class="container" id="r">
+      <h2 class="page-header mt-5 h2-header">ADVENTURE ACTIVITIES</h2>
+      <ul class="mr-5">
+          <li class="mark mt-5"><strong>Rafting or Kayaking</strong>
+              Rafting is the most common adventure activity of India. Every adventure enthusiast starts off by setting the foot in the waters for a swift rafting experience. Rishikesh is the ultimate destination for river rafting in India. It is extremely popular amongst youngsters who thrive upon adventure trips or camping trips.</li>
+          <li class="mark"><strong>Waterfall Rappelling</strong>
+              Rappelling is an adventure sport that allows you to descend down from a cliff using a rope. Waterfall rappelling, as the name suggests, is descending down from a waterfall using the same technique. With a strong force of water, it makes for a tricky yet super-adventurous activity that interests those who want to delve in extreme thrill. Thane in Maharashtra is the destination for Water Rappelling</li>
+          <li class="mark"><strong>Skydiving or Scuba diving</strong>
+              Sky-Diving involves jumping from a plane or any other place of height and then travelling trough the air. As quirky as it sounds, it is definitely not for the weak-hearted. This adventure sport is a recent addition to India’s long list of breath-taking activities and can be only found in a small town in Gujarat called Deesa.
+              Scuba-Diving is another name for under water diving. It is for those who love the exciting marine life sealed under the gigantic water-bodies. Goa and Andaman Islands are the most sought after destinations for scuba-diving in India.</li>
+          <li class="mark"><strong> Trekking</strong>
+              Trekking might sound like a very common and relatively easy activity for adventure in India. But if you try experimenting at some spine-chilling locations, trekking can be the one of the most thrilling activities. Try trekking through the frozen Zanskar Riverin Ladakh with sub-zero temperatures! Now that’s called a real bone-freezing experience, quite literally!</li>
+          <li class="mark"><strong>Cliff Jumping</strong>
+              For the most aggressive adrenaline rush, try jumping from a cliff in Rishikesh. Cliff Jumping is a popular adventure activity in the rugged terrains of Shivpuri. This place is thronged by adventure buffs all through the year. It is definitely a jaw-dropping activity that gives immense pleasure</li>
+          <li class="mark" id="p"><strong>Paragliding</strong>
+              If you are a flying freak who wants to spread its arms wide up in the air and feel like a bird, Paragliding is the tailor-made activity for you! Whether it is the lush greenery of the valleys that you would like to gaze or it is the snow-capped mountain that you would love to fly-upon, the choice is absolutely yours! There are a number of destinations in India to choose from when it comes to Paragliding!</li>
+            </ul>
+      </div>
+        
+        <div class="container col-sm-6">
+             <h2 class="shadow p-2 mb-4 mt-4">WATCH VIDEO <i class="far fa-hand-point-right"></i></h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <video class="embed-responsive" src="Amazing Aruku valley 4k Video.mp4" controls></video>
+            </div>
+        </div>
+        <hr>
+      <div class="container">
+            <h2  id="g">ADVENTURE GADGETS</h2>
+                <div class="row mt-5">
+                  <div class="col-sm-6 " id="bk1">
+                        <p style="font-family: arvo;font-size: 20px;text-align: center;margin-top:10%" class="bg-warning">Climate is one of the things that is out of your control, but what if you can alter your body temperature with a watch? With the <strong>Aircon Watch</strong>,now you can. This water-resistant watch operates by generating pulses to your nervous system through the wrist,either emitting heat or cold in intervals of 15 seconds on and 15 seconds off.</p>
+                </div>
+                     <div class="col-sm-5">
+                        <img src="4-gadgets-outdoor-adventurer-aircon-1508848644.jpg" class="shadow p-4 mb-4 bg-white" style="width: 100%">
+                    </div>
+          </div>
+          <div class="row">
+               <div class="col-md-5">
+                        <img src="81ePV9k-KTL._SL1500_.jpg" style="width: 100%;" class="shadow p-4 mb-4 bg-white">
+                </div>
+                
+              <div class="col-sm-6" id="bk2">
+                        <p style="font-family: arvo;font-size: 20px;text-align: center;margin-top:10%" class="bg-warning">Increase your chances of being found in remote areas with no cell service by means of <strong>goTenna’s</strong> Bluetooth low-energy pairing with your cell phone when cell service and WiFi are unavailable. Including free, offline maps for any region of the world this is a very handy survival tool to have.</p>
+                 </div>
+                
+            </div>
+         <div class="row">
+                <div class="col-sm-6" id="bk">
+                        <p style="font-family: arvo;font-size: 20px;text-align: center;margin-top:10%" class="bg-warning">Instead of taking a bunch of different bags with you for a day in the woods, just bring the <strong>Wanaka Daypack</strong> that does it all. This compressible 24-liter bag makes storage easy by combining six functions into one no-fuss unit, which includes a    compression sack, cooler, camera case compartment, laundry bag, inflatable backpack frame, and fanny pack.</p>
+                    </div> 
+            <div class="col-sm-5">
+                        <img src="5-gadgets-outdoor-adventurer-wanka-pack-1508848514.jpg" style="width:100%;" class="shadow p-4 mb-4 bg-white">
+                </div>
+          </div>
+          
+                    
+        </div>
+        <div class="container bg-light" id="ig">
+     
+        <h2 class="text-danger shadow-sm p-2 mb-4 bg-black rounded">IMAGE GALLERY</h2>
+        <div class="row">
+            <div class="col-sm-4"><img src="StockSnap_Y0A1XG6L08.jpg" style="width:100%" class="shadow p-3 mb-4 rounded bg-light"></div>
+            <div class="col-sm-4"> <img src="StockSnap_5IWKYDU1L5.jpg" style="width:100%" class="shadow p-3 mb-4 rounded bg-light"></div>
+            <div class="col-sm-4"><img src="StockSnap_IERCHNQJIH.jpg" style="width:100%" class="shadow p-3 mb-4 rounded bg-light"></div>
+            </div>
+        <div class="row">
+            <div class="col-sm-4"><img src="StockSnap_I0CDZXUIR0.jpg" style="width:100%" class="shadow p-3 mb-4 rounded bg-light"></div>
+            <div class="col-sm-4"><img src="StockSnap_QKZ38O0NKX.jpg" style="width:100%" class="shadow p-3 mb-4 rounded bg-light"></div>
+            <div class="col-sm-4"><img src="StockSnap_IWI4A02F2G.jpg" style="width:100%" class="shadow p-3 mb-4 rounded bg-light"></div>
+            </div>
+        </div>
+        
+   
+    <div class="container mt-3" id="a">
+      <div class="bg-info jumbotron-fluid" style="text-align:center;">
+        <h5>ADVENTURE TIME.PVT LTD</h5>
+        <h6>Founder - D.Prasad</h6>
+        <h6>Branch - Visakapatanam</h6>
+      <br>
+        <h5>CONTACT</h5>
+        <h6>Facebook</h6>
+        <h6>adventurevskp@gmail.com</h6>
+        
+        
+        </div>
     </div>
-  </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-  </div>
-</form>
+        
+</div>
+    
 
-<script>
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the crurrent tab
-
-function showTab(n) {
-  // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  //... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n)
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form...
-  if (currentTab >= x.length) {
-    // ... the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }
-  }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
-}
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
-}
-</script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
